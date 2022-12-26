@@ -14,7 +14,7 @@ const users = require('./json/users.json');
 /**
  * Get a single user from the database given their email.
  * @param {String} email The email of the user.
- * @return {Promise<{}>} A promise to the user.
+ * @return pool A query made to the user table
  */
 const getUserWithEmail = function(email) {
   const queryString = `
@@ -37,7 +37,7 @@ exports.getUserWithEmail = getUserWithEmail;
 /**
  * Get a single user from the database given their id.
  * @param {string} id The id of the user.
- * @return {Promise<{}>} A promise to the user.
+ * @return pool A query made to the user table.
  */
 const getUserWithId = function(id) {
   const queryString = `
@@ -61,7 +61,7 @@ exports.getUserWithId = getUserWithId;
 /**
  * Add a new user to the database.
  * @param {{name: string, password: string, email: string}} user
- * @return {Promise<{}>} A promise to the user.
+ * @return pool A new entry made to the users table.
  */
 const addUser =  function(user) {
 
@@ -89,7 +89,7 @@ exports.addUser = addUser;
 /**
  * Get all reservations for a single user.
  * @param {string} guest_id The id of the user.
- * @return {Promise<[{}]>} A promise to the reservations.
+ * @return pool A query made to the properties related tables.
  */
 const getAllReservations = function(guest_id, limit = 10) {
   const queryString = `
@@ -119,7 +119,7 @@ exports.getAllReservations = getAllReservations;
  * Get all properties.
  * @param {{}} options An object containing query options.
  * @param {*} limit The number of results to return.
- * @return {Promise<[{}]>}  A promise to the properties.
+ * @return pool A query made to the properties and property_reviews tables.
  */
 const getAllProperties = function(options, limit = 10) {
   
@@ -182,7 +182,7 @@ exports.getAllProperties = getAllProperties;
 /**
  * Add a property to the database
  * @param {{}} property An object containing all of the property details.
- * @return {Promise<{}>} A promise to the property.
+ * @return pool A new entry made to the properties table.
  */
 const addProperty = function(property) {
   
