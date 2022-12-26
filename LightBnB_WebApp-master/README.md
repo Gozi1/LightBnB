@@ -4,6 +4,17 @@
 
 LightBNB is a multi-page Airbnb clone that uses  server-side Javascript to display information from an SQL database via queries. 
 
+## Final Product
+
+### Home Page
+!["Home Page"](public/images/home_page.png)
+### Sign up Page
+!["Sign up Page"](public/images/sign_up_page.png)
+### Search Page
+!["Search Page"](public/images/search_page.png)
+### Create Property page
+!["create Property page"](public/images/create_property_page.png)
+
 ## Dependencies
 
 - Node.js
@@ -23,6 +34,11 @@ LightBNB is a multi-page Airbnb clone that uses  server-side Javascript to displ
 ```
 ├── public
 │   ├── index.html
+|   ├── images
+|   |   ├── create_property_page.png
+|   |   ├── home_page.png
+|   |   ├── search_page.png
+|   |   ├── sign_up.png
 │   ├── javascript
 │   │   ├── components 
 │   │   │   ├── header.js
@@ -48,6 +64,7 @@ LightBNB is a multi-page Airbnb clone that uses  server-side Javascript to displ
 
 * `public` contains all of the HTML, CSS, and client side JavaScript. 
   * `index.html` is the entry point to the application. It's the only html page because this is a single page application.
+  * `images` contains screenshots of the app.
   * `javascript` contains all of the client side javascript files.
     * `index.js` starts up the application by rendering the listings.
     * `network.js` manages all ajax requests to the server.
