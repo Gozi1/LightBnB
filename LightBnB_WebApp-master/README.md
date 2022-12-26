@@ -1,5 +1,23 @@
 # LightBnB
 
+## Description
+
+LightBNB is a multi-page Airbnb clone that uses  server-side Javascript to display information from an SQL database via queries. 
+
+## Dependencies
+
+- Node.js
+- Express
+- EJS
+- bcryptjs
+- cookie-session
+- pg
+
+## Getting Started
+
+- Install all dependencies (using the `npm install` command).
+- Run the development web server using the `npm run local` command.
+
 ## Project Structure
 
 ```
@@ -40,4 +58,4 @@
   * `server.js` is the entry point to the application. This connects the routes to the database.
   * `apiRoutes.js` and `userRoutes.js` are responsible for any HTTP requests to `/users/something` or `/api/something`. 
   * `json` is a directory that contains a bunch of dummy data in `.json` files.
-  * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
+  * `database.js` is responsible for all queries to the database. It currently connects to a psql database.
